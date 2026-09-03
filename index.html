@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نشاطات المدرسة 2026</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 480px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 24px;
+        }
+        h1 {
+            text-align: center;
+            font-size: 1.4rem;
+            color: #1a252f;
+            margin-bottom: 20px;
+        }
+        .option-btn {
+            width: 100%;
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 16px;
+            border-radius: 10px;
+            font-size: 1.05rem;
+            font-weight: bold;
+            text-align: right;
+            cursor: pointer;
+            margin-top: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+        .option-btn:hover {
+            background-color: #1d4ed8;
+        }
+        .details {
+            display: none;
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-top: none;
+            border-radius: 0 0 10px 10px;
+            padding: 16px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .sub-option {
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 8px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .sub-details {
+            display: none;
+            padding: 8px 12px;
+            color: #475569;
+            font-size: 0.9rem;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>نشاطات الطلاب 2026 🏫</h1>
+
+    <button class="option-btn" onclick="toggleDetails('opt1')">
+        <span>1) School Teams</span>
+        <span>▼</span>
+    </button>
+    <div id="opt1" class="details">
+        <p>هنا معلومات الفرق المدرسية والأنشطة الأكاديمية أو الثقافية الخاصة بها.</p>
+        <br>
+        <div class="sub-option" onclick="toggleDetails('sub1_1')">▸ جدول التدريبات</div>
+        <div id="sub1_1" class="sub-details">كل يوم أسبوعياً الساعة 2:00 مساءً في القاعة الرئيسية.</div>
+    </div>
+
+    <button class="option-btn" onclick="toggleDetails('opt2')">
+        <span>2) Saturday Activity</span>
+        <span>▼</span>
+    </button>
+    <div id="opt2" class="details">
+        <p>تفاصيل نشاط يوم السبت والتجمعات والرحلات المقررة.</p>
+        <br>
+        <p><strong>الموعد:</strong> من الساعة 9:00 صباحاً حتى 1:00 ظهراً.</p>
+    </div>
+
+    <button class="option-btn" onclick="toggleDetails('opt3')">
+        <span>3) Football Little League 2026</span>
+        <span>▼</span>
+    </button>
+    <div id="opt3" class="details">
+        <p>جدول دوري كرة القدم للصغار لعام 2026، شروط المشاركة، والمباريات القادمة.</p>
+        <br>
+        <div class="sub-option" onclick="toggleDetails('sub3_1')">▸ الفرق المشاركة</div>
+        <div id="sub3_1" class="sub-details">فريق الصقور، فريق الأبطال، فريق الفرسان.</div>
+    </div>
+</div>
+
+<script>
+    function toggleDetails(id) {
+        const element = document.getElementById(id);
+        if (element.style.display === "block") {
+            element.style.display = "none";
+        } else {
+            element.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
