@@ -1,0 +1,64 @@
+/* Reset basic rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #0d131d;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* الحاوية الرئيسية للصفحة الفرعية */
+.page-container {
+    width: 100%;
+    max-width: 650px; /* يحدد العرض الكلي للصفحة بشكل مريح */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* مسافة بين الصورة والزر */
+}
+
+/* حاوية الصورة لتصغيرها والتحكم بأبعادها */
+.image-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.image-box img {
+    width: 100%;
+    max-height: 70vh; /* يضمن ألا تتجاوز الصورة 70% من ارتفاع الشاشة */
+    object-fit: contain; /* يحافظ على أبعاد الجداول والخطوط بدقة */
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+/* زر العودة (Back Button) - أنيق ومحاذى للوسط */
+.btn-back {
+    display: inline-block;
+    width: auto;
+    min-width: 180px; /* حجم الكبسة مناسب وغير عريض */
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #00468c; /* الأزرق الخاص بالمدرسة */
+    text-decoration: none;
+    text-align: center;
+    border-radius: 25px; /* حواف دائرية أنيقة */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.25s ease;
+}
+
+.btn-back:hover {
+    background-color: #d1131a; /* يتغير للأحمر عند التمرير */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(209, 19, 26, 0.4);
+}
