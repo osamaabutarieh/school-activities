@@ -1,63 +1,92 @@
-/* تنسيق عام للصفحة */
-body {
+/* Reset & General Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0d131d; /* لون خلفية داكن يناسب التصميم */
+    min-height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+/* Header Box */
+.header {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    background-color: #f0f0f0; /* لون خلفية اختياري */
-}
-
-/* تنسيق للحاوية الرئيسية */
-.main-container {
     text-align: center;
+    gap: 25px;
+    margin-top: 10px;
 }
 
-/* تنسيق الصورة الرئيسية */
-.main-container img {
+/* Logo Setup */
+.logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-img {
     max-width: 100%;
     height: auto;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-/* تنسيق لحاوية الأزرار */
-.button-container {
-    margin-top: 20px;
-}
-
-/* تنسيق الأزرار */
-.nav-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 10px;
-    background-color: #00468c; /* لون المدرسة الأزرق */
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-    background-color: #d1131a; /* لون المدرسة الأحمر */
-}
-
-/* تنسيق إضافي لصفحة إنستقرام */
-.instagram-accounts {
+/* Navigation Buttons Container */
+.button-group {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.instagram-account {
-    margin: 0 20px;
-    text-align: center;
+/* Base Button Styling */
+.btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #00468c; /* الأزرق الخاص بـ MAS */
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 70, 140, 0.3);
+    transition: all 0.25s ease-in-out;
 }
 
-.instagram-account img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+.btn:hover {
+    background-color: #d1131a; /* الأحمر الخاص بـ MAS عند التمرير */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(209, 19, 26, 0.4);
+}
+
+/* Instagram Specific Button Style */
+.btn-instagram {
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    box-shadow: 0 4px 12px rgba(220, 39, 67, 0.3);
+}
+
+.btn-instagram:hover {
+    opacity: 0.95;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(220, 39, 67, 0.5);
+}
+
+/* Responsive Grid for wider screens */
+@media (min-width: 480px) {
+    .button-group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
