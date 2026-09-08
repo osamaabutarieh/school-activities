@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
     background-color: #0d131d;
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -14,47 +15,51 @@ body {
     padding: 20px;
 }
 
-/* الحاوية الرئيسية لتوسيط الكل عمودياً وأفقياً */
+/* الحاوية الرئيسية للتوسيط */
 .page-container {
     width: 100%;
-    max-width: 500px; /* عرض ممتاز وعملي للبوستر */
+    max-width: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* يضمن مائة بالمائة محاذاة الزر في الوسط */
+    align-items: center;
+    text-align: center;
 }
 
-/* حاوية الصورة */
+/* عرض الصورة بشكل متناسق */
 .image-box {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-bottom: 25px;
 }
 
 .image-box img {
     width: 100%;
-    max-height: 75vh;
+    max-height: 70vh;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 14px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
 }
 
-/* زر الرجوع محاذى في المنتصف مع مسافة علوية (Margin Top) */
+/* زر العودة للرئيسية المطابق لزر صفحة الروابط */
 .btn-back {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 24px;
-    font-size: 0.9rem;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px 28px;
+    font-size: 0.95rem;
     font-weight: 600;
     color: #ffffff;
     background-color: #00468c;
     text-decoration: none;
-    border-radius: 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
     transition: all 0.25s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .btn-back:hover {
     background-color: #d1131a;
     transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(209, 19, 26, 0.4);
 }
