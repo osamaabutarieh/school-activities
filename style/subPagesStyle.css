@@ -43,23 +43,21 @@ body {
 
 /* زر العودة للرئيسية المطابق لزر صفحة الروابط */
 .btn-back {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 12px 28px;
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #ffffff;
-    background-color: #00468c;
-    text-decoration: none;
-    border-radius: 25px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
-    transition: all 0.25s ease;
-}
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #00468c;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
 
-.btn-back:hover {
-    background-color: #d1131a;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(209, 19, 26, 0.4);
-}
+        .btn-back:hover {
+            background-color: #d1131a;
+            transform: translateY(-2px);
+        }
