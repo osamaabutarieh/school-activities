@@ -1,30 +1,183 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instegram Links</title>
-    <link rel="stylesheet" href="/style/subPagesStyle.css">
+    <title>Social Media Links | Modern American School</title>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0d131d;
+            color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .bio-container {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Profile/Logo Image */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #00468c;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            margin-bottom: 15px;
+        }
+
+        .profile-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .profile-subtitle {
+            font-size: 0.95rem;
+            color: #a0aec0;
+            margin-bottom: 25px;
+        }
+
+        /* Links Wrapper */
+        .links-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        /* Link Card */
+        .link-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 14px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            color: #ffffff;
+            text-decoration: none;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Instagram Gradient Style */
+        .link-card.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            border: none;
+        }
+
+        .link-card.instagram:hover {
+            opacity: 0.92;
+            box-shadow: 0 8px 22px rgba(220, 39, 67, 0.4);
+        }
+
+        .link-content {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .link-icon {
+            font-size: 1.4rem;
+        }
+
+        .link-text {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .arrow-icon {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Back Button */
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 24px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #00468c;
+            text-decoration: none;
+            border-radius: 20px;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-back:hover {
+            background-color: #d1131a;
+            transform: translateY(-2px);
+        }
+    </style>
 </head>
 <body>
-    <div class="main-container">
-        <h1>Follow us: </h1>
-        <div class="instagram-accounts">
-            <div class="instagram-account">
-                <a href="https://www.instagram.com/themodernamericanschool?stkn=cHdudmg4MWoyZ3Yx" target="_blank">
-                    <!-- <img src="images/AmericanLogo.png" alt="شعار المدرسة"> -->
-                <p>حساب المدرسة الرسمي</p>
-                </a>
-            </div>
-            <div class="instagram-account">
-                <a href="https://www.instagram.com/pheeagles?stkn=MXRwa2xzeXdwZ3ZkcA==" target="_blank">
-                <p>صفحة المدرسة الرياضية</p>
 
-                    <!-- <img src="path/to/sports/logo.png" alt="شعار صفحة الرياضة"> -->
-                </a>
-            </div>
+    <div class="bio-container">
+        <!-- Logo Image -->
+        <img src="poster.png" alt="Modern American School" class="profile-img">
+        
+        <h1 class="profile-title">Follow Us On Social Media</h1>
+        <p class="profile-subtitle">Modern American School</p>
+
+        <!-- Social Links -->
+        <div class="links-wrapper">
+            <!-- Official School Account -->
+            <a href="https://www.instagram.com/your_school_account" target="_blank" class="link-card instagram">
+                <div class="link-content">
+                    <i class="fa-brands fa-instagram link-icon"></i>
+                    <span class="link-text">Official School Instagram</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
+
+            <!-- School Sports Account -->
+            <a href="https://www.instagram.com/your_sports_account" target="_blank" class="link-card instagram">
+                <div class="link-content">
+                    <i class="fa-brands fa-instagram link-icon"></i>
+                    <span class="link-text">School Sports Page</span>
+                </div>
+                <i class="fa-solid fa-chevron-right arrow-icon"></i>
+            </a>
         </div>
-        <a href="index.html" class="nav-button">العودة للرئيسية</a>
+
+        <!-- Back Button -->
+        <a href="index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Home
+        </a>
     </div>
+
 </body>
 </html>
